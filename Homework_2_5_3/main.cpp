@@ -4,7 +4,7 @@ class Figure{
     protected:
         std::string figureName; 
         int side;
-        bool isTrue = true;
+        bool isTrue;
         std::string correct(){
             if(this->isTrue) return "Правильная";
             return "Неправильная";
@@ -14,6 +14,7 @@ class Figure{
         Figure(int side = 0){
             this->side = side;
             this->figureName = "Фигура";
+            this->isTrue = true;
         }
         virtual void getSide(){
             std::cout << figureName << ": "<< side << std::endl;
